@@ -1,80 +1,96 @@
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     height: 100vh;
-    background-color: #f4f6f8;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
 }
 
 /* Sign in form card */
 .signin {
     width: 320px;
-    background-color: #ffffff;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: linear-gradient(145deg, #ffffff, #f0f8ff);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Labels */
 .signin label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 14px;
     color: #333;
+    font-weight: bold;
 }
 
 /* Inputs */
 .signin input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 18px;
+    padding: 12px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 14px;
+    transition: border-color 0.3s ease;
 }
 
 /* Focus effect */
 .signin input:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: #4fc3f7;
+    box-shadow: 0 0 5px rgba(79, 195, 247, 0.5);
 }
 
 /* Submit button */
 .signin button[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
-    background-color: #007bff;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff6b6b, #ffb347);
     color: white;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .signin button[type="submit"]:hover {
-    background-color: #0056b3;
+    background: linear-gradient(45deg, #ff5252, #ffa726);
+    transform: scale(1.05);
 }
 
 /* Sign up button */
 #signup {
     margin-top: 15px;
     padding: 8px 16px;
-    background-color: transparent;
+    background: linear-gradient(45deg, #ff6b6b, #ffb347);
     border: none;
-    color: #007bff;
+    border-radius: 20px;
+    color: white;
     font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0;
 }
 
 #signup:hover {
-    text-decoration: underline;
+    background: linear-gradient(45deg, #ff5252, #ffa726);
+    transform: scale(1.05);
 }
 
 /* Responsive */

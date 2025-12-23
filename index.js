@@ -1,6 +1,8 @@
 let id=1;
 let img;
+let title;
 let productsnumber=20
+let productsdiv = document.querySelector(".cards");
 function getimg(id)
 {
     let xhr=new XMLHttpRequest();
@@ -13,7 +15,9 @@ function getimg(id)
             let data=xhr.responseText;
             data=JSON.parse(data);
             img=document.querySelector(".slider");
+            title=document.querySelector(".title");
             img.src=data.thumbnail;
+            title.innerText=data.title;
         }
     }
 }
@@ -35,7 +39,7 @@ function getproduct(id)
             <h5>${data.title}</h5> 
             <img src="${data.thumbnail}" class="card">
             <button type="sumbit" class="btn${id}">details</button>`
-            document.body.appendChild(product);
+            productsdiv.appendChild(product);
             button=document.querySelector(`.btn${id}`);
             product.addEventListener("submit",e=>
             {

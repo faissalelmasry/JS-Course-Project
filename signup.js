@@ -5,6 +5,7 @@ let usernamepattern=/^.{3,}$/;
 let passwordpattern=/^(?=.*[A-Z])(?=.*[0-9])(?=.*[^\w\s]).{8,}$/
 signup.addEventListener("submit",(e)=>
 {
+    e.preventDefault();
     let cookie=getCookie(username.value)
     if(cookie)
     {
@@ -17,7 +18,7 @@ signup.addEventListener("submit",(e)=>
             if(passwordpattern.test(password.value))
             {
                 setCookie(username.value,password.value);
-                open("./SignIn.html");
+                open("./SignIn.html","_self");
             }
             else
             {

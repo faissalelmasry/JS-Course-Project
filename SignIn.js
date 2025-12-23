@@ -11,19 +11,19 @@ signin.addEventListener("submit",(e)=>
     {
         if(decodeURIComponent(cookie)===password.value)
         {
-            open("./index.html");
+            open("./index.html","_self");
         }
         else
         {
-           open("./signup.html"); 
+           open("./signup.html","_self"); 
         }
     }
     else
     {
-       open("./signup.html"); 
+       open("./signup.html","_self"); 
     }
 });
 signup.addEventListener("click",()=>
 {
-    open("./signup.html");
+    open("./signup.html","_self");
 });
